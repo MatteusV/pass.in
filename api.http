@@ -1,0 +1,32 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "Novo evento2",
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/fbd02d49-b0d2-499f-996c-ffda3fdb5235/attendees
+Content-Type: application/json
+
+{
+  "name": "Matteus Varlesse",
+  "email": "varlesse04@gmail.com"
+}
+###
+
+GET http://localhost:3333/events/fbd02d49-b0d2-499f-996c-ffda3fdb5235
+
+
+###
+
+GET http://localhost:3333/attendees/5/badge
+
+###
+GET http://localhost:3333/attendee/6/check-in
+
+###
+GET http://localhost:3333/events/fbd02d49-b0d2-499f-996c-ffda3fdb5235/attendees?query=matteus
